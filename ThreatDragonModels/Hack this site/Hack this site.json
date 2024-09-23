@@ -27,8 +27,8 @@
               "height": 250
             },
             "shape": "trust-boundary-box",
-            "id": "cda9ae30-2980-494d-8368-3e72e09bba03",
             "zIndex": -1,
+            "id": "cda9ae30-2980-494d-8368-3e72e09bba03",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -58,8 +58,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "1b0784ce-05a1-46e3-b425-6b9e7a72e312",
             "zIndex": 1,
+            "id": "1b0784ce-05a1-46e3-b425-6b9e7a72e312",
             "data": {
               "type": "tm.Actor",
               "name": "Attacker",
@@ -171,8 +171,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "e7fd1bef-5121-4361-8b6d-0496793b3212",
             "zIndex": 11,
+            "id": "e7fd1bef-5121-4361-8b6d-0496793b3212",
             "data": {
               "type": "tm.Process",
               "name": "Authentication",
@@ -285,8 +285,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "40bcb0dd-1747-45e5-ae6d-c8d38dc950df",
             "zIndex": 12,
+            "id": "40bcb0dd-1747-45e5-ae6d-c8d38dc950df",
             "data": {
               "type": "tm.Store",
               "name": "Profile",
