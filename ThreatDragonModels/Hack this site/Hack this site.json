@@ -2,7 +2,7 @@
   "version": "2.2.0",
   "summary": {
     "title": "Hack this site",
-    "owner": "",
+    "owner": "hackthissite.org",
     "description": "",
     "id": 0
   },
@@ -20,7 +20,7 @@
       }
     ],
     "diagramTop": 1,
-    "reviewer": "",
+    "reviewer": "Ilya Demyanenko",
     "threatTop": 0
   }
 }
