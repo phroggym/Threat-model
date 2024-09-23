@@ -16,11 +16,297 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.2.0",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 409.9999999999991,
+              "y": 150.0000000000017
+            },
+            "size": {
+              "width": 420,
+              "height": 250
+            },
+            "shape": "trust-boundary-box",
+            "id": "cda9ae30-2980-494d-8368-3e72e09bba03",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 210,
+              "y": 310
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Attacker"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "1b0784ce-05a1-46e3-b425-6b9e7a72e312",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Attacker",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": true,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "1a070a14-f2a0-43c1-8c30-66d3496c6ce4",
+            "source": {
+              "cell": "1b0784ce-05a1-46e3-b425-6b9e7a72e312"
+            },
+            "target": {
+              "x": 430,
+              "y": 310
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "deb8a724-42cf-420f-94b8-11796379dd02",
+            "source": {
+              "cell": "e7fd1bef-5121-4361-8b6d-0496793b3212"
+            },
+            "target": {
+              "cell": "40bcb0dd-1747-45e5-ae6d-c8d38dc950df"
+            }
+          },
+          {
+            "position": {
+              "x": 436,
+              "y": 280
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Authentication"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "e7fd1bef-5121-4361-8b6d-0496793b3212",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Process",
+              "name": "Authentication",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": true,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "89fbff93-f694-4020-95e4-fea77aca4df9",
+                  "title": "Sensitive Data Exposure",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Пароли не должны храниться в комментариях кода, так как это позволяет злоумышленникам легко их извлечь.",
+                  "mitigation": "D - 9\nR - 10\nE - 10\nA - 10\nD - 10",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "49"
+                },
+                {
+                  "id": "89fbff93-f694-4020-95e4-fea77aca4df9",
+                  "title": "Insecure Password Verification",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Отсутствие сравнения с легитимными паролями может позволить злоумышленникам входить в систему, минуя аутентификацию.",
+                  "mitigation": "D - 9\nR - 10\nE - 10\nA - 10\nD - 10",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "49"
+                },
+                {
+                  "id": "9d5027a4-3cba-4d50-9479-f0cf97a9b441",
+                  "title": "Lack of Access Control",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Отсутствие ограничений на доступ к страницам, связанным с паролями, может привести к атакам, таким как взлом паролей.",
+                  "mitigation": "D - 9\nR - 7.5\nE - 10\nA - 10\nD - 10",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "36.5"
+                },
+                {
+                  "id": "9d5027a4-3cba-4d50-9479-f0cf97a9b441",
+                  "title": "Parameter Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Возможность изменять почту для напоминания пароля говорит о том, что проверка данных на стороне сервера отсутствует или недостаточна.",
+                  "mitigation": "D - 9\nR - 10\nE - 10\nA - 10\nD - 5",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "44"
+                },
+                {
+                  "id": "9d5027a4-3cba-4d50-9479-f0cf97a9b441",
+                  "title": "Inadequate Server-Side Input Validation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Возможность подмены данных в запросе и их обработка сервером без проверки ведет к возможности несанкционированного изменения данных.",
+                  "mitigation": "D - 9\nR - 10\nE - 9\nA - 10\nD - 5",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "43"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 632,
+              "y": 250
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Profile"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "40bcb0dd-1747-45e5-ae6d-c8d38dc950df",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Store",
+              "name": "Profile",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          }
+        ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "Ilya Demyanenko",
-    "threatTop": 0
+    "threatTop": 5
   }
 }
